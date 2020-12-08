@@ -40,3 +40,9 @@ variable "operator_version" {
   description = "The starting version of the CSV"
   default     = "v0.0.9"
 }
+
+variable "tls_secret_name" {
+  type        = string
+  sescription = "Secret name containing tls certificate"
+  default.    = "ingress-tls"
+  
