@@ -52,7 +52,7 @@ resource "null_resource" "argocd-instance" {
   }
 
   provisioner "local-exec" {
-    command = "${path.module}/scripts/deploy-instance.sh ${var.cluster_type} ${self.triggers.namespace} ${var.ingress_subdomain} ${self.triggers.name}"
+    command = "${path.module}/scripts/deploy-instance.sh ${var.cluster_type} ${self.triggers.namespace} ${var.ingress_subdomain} ${self.triggers.name} ${var.tls_secret_name}"
 
     environment = {
       KUBECONFIG    = self.triggers.kubeconfig
