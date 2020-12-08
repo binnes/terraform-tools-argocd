@@ -52,3 +52,7 @@ versions:
         id: namespace
         output: name
         discriminator: tools
+    - name: tls_secret_name
+      moduleRef:
+        id: cluster
+        output: tls_secret_name
