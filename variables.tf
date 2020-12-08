@@ -43,6 +43,6 @@ variable "operator_version" {
 
 variable "tls_secret_name" {
   type        = string
-  sescription = "Secret name containing tls certificate"
-  default.    = "ingress-tls"
+  description = "Secret name containing tls certificate"
+  default     = "ingress-tls"
 }
