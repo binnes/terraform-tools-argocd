@@ -13,7 +13,7 @@ locals {
   url_endpoint      = "https://${local.host}"
   grpc_url_endpoint = "https://${local.grpc_host}"
   password_file     = "${local.tmp_dir}/argocd-password.val"
-  tls_secret_name   = "${var.tls_secret}"
+  tls_secret_name   = "${var.tls_secret_name}"
 }
 
 resource "null_resource" "argocd-subscription" {
